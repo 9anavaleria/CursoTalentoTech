@@ -1,0 +1,17 @@
+html{
+    font-size: 62.5%;/*definir tamaño de la fuente -- 1rem = 10px */
+    box-sizing: border-box; /* Hack Box Model */
+    scroll-snap-type: Y mandatory ;
+}
+body{
+    font-size: 16px;/*definir tamaño de la fuente -- 1rem = 10px */
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(230, 229, 229);
+}
+main{
+    margin-top: 2%;
+    margin-left: 2%;
+}
+h2{
+    color:tomato;
+}

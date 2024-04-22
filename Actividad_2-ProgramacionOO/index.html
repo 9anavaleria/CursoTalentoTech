@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="contenedor">
+        <h1>Calculo costo de envio</h1>
+        <form class="formulario">
+            <input class="datos" type="text" id="articulo" placeholder="Ingresar Articulo" required>
+            <p id="errorArticulo" style="display: none;"></p>
+            <input class="datos" type="number" id="peso" placeholder="Ingresar Peso" required>
+            <p id="errorPeso" style="display: none;"></p>
+            <div class="ciudad">
+                <label class="datosC" for="ciudad">Ciudad</label>
+                <select class="datosS" id="ciudad" name="Ciudad" required>
+                    <option value="" hidden>Selecciona la ciudad </option>
+                    <option value="Barranquilla" >Barranquilla</option>
+                    <option value="Cali" >Cali</option>
+                    <option value="Cartagena" >Cartagena</option>
+                    <option value="SantaMarta" >Santa Marta</option>
+                    <option value="Valledupar" >Valledupar</option>
+                </select>
+            </div>
+            <p id="errorCiudad" style="display: none;"></p>
+        </form>
+        <button id="enviar" class="boton">Calcular</button> 
+        <p>El articulo a enviar es: <span id="nombre"></span></p>  
+        <p>El valor del envio es: <span id="total"></span></p>  
+        <p>El tiempo de envio es: <span id="tiempo"></span></p>  
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
