@@ -7,6 +7,7 @@ import React, { useState } from "react";
 }*/
 
 function Fruta(props){
+    console.log(props.tipo);
     return(<li>Fruta {props.tipo}</li>)
 }
 
@@ -22,7 +23,7 @@ function Formulario2(){
     }
     const manejoSumision=(event)=>{
         event.preventDefault();
-        console.log("Enviado "+ entradas.nombre + " "+ entradas.edad+ " "+entradas.auto);
+        console.log("Enviado "+ entradas.nombre + " "+ entradas.edad+ " "+entradas.auto+" "+ entradas.frut);
     }
     return(
         <div>
@@ -37,11 +38,12 @@ function Formulario2(){
                     <option value="Ford">Ford</option>
                     <option value="Mazda">Mazda</option>
                     <option value="Toyota">Toyota</option>
-                </select>            
-                <h1>Mi lista de frutas</h1>
-                <ul>
-                    {frutas.map((frut)=> <Fruta tipo={frut}/>)}
-                </ul>
+                </select>    
+                <input list="listfrut" name="frut" placeholder="Edad" value={entradas.frut||" "} 
+                onChange={(evento)=>manejoCambios(evento)}/>        
+                <datalist id="listfrut">
+                    {frutas.map((frut)=> (<option value={frut}/>))}
+                </datalist>
             </form>
            
         </div>
