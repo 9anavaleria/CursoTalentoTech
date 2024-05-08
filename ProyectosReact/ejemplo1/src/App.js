@@ -5,14 +5,15 @@ import Titulo from './practicas/Titulo';
 import Contador2 from './practicas/Contador2';
 import Futbol from './practicas/Futbol'; 
 import Formulario2 from './practicas/Formulario2'*/
-import Rutas from './Rutas';
+import Recibir from './Componentes/Recibir';
+import FormActualizado from './Componentes/FormActualizado';
 
 
 
 function App() {
   return (
     <div className="App">
-      <Rutas/>
+      <FormActualizado/>
     </div>
   );
 }
